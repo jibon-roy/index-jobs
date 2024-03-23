@@ -37,9 +37,6 @@ const config: Config = {
         inputHoverDark: '#444444', // Input Hover
         linkHoverDark: '#FFB74D', // Link Hover
 
-        // Navigation Bar
-        navigationBar: '#2196F3', // Same as Header/Footer in Light Theme
-        navigationText: '#FFFFFF', // White
       },
     },
   },
