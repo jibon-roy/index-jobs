@@ -21,7 +21,6 @@ export default function App() {
       <div className='text-2xl text-c-primary'>
         Some text
       </div>
-      {/* Rest of your content */}
     </div >
   );
 }

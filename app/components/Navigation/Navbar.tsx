@@ -36,14 +36,13 @@ const Navbar: React.FC<NavbarProps> = ({ links }) => {
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="flex  bg-c-primary items-center justify-between h-16">
                     <div className="flex items-center">
-
                         <div className="flex-shrink-0">
                             <img className="h-8 w-8" src="/next.svg" alt="Logo" />
                         </div>
                         <div className="hidden md:block">
                             <div className="ml-10 flex items-baseline space-x-4">
                                 {links.map((link, index) => (
-                                    <a key={index} href={link.href} className="text-c-text hover:text-c-primary">
+                                    <a key={index} href={link.href} className="text-c-text hover:text-c-linkHover">
                                         {link.icon}
                                         <span className="ml-2">{link.title}</span>
                                     </a>
