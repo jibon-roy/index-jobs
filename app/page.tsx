@@ -1,10 +1,9 @@
-
 "use client"
 import { HomeIcon, DocumentTextIcon, BriefcaseIcon, UsersIcon } from '@heroicons/react/24/outline';
-
 import Navbar from './components/Navigation/Navbar';
-import { useContext } from 'react';
-import { ColorContext } from './providers/colors/ColorProvider';
+
+
+
 
 
 const links = [
@@ -14,15 +13,15 @@ const links = [
   { title: 'Freelancers', icon: <UsersIcon className="h-6 w-6" />, href: '/freelancers' },
 ];
 
-export default function Home() {
-
-  const colors = useContext(ColorContext)
-  console.log(colors)
+export default function App() {
 
   return (
     <div>
       <Navbar links={links} />
+      <div className='text-2xl text-c-primary'>
+        Some text
+      </div>
       {/* Rest of your content */}
-    </div>
+    </div >
   );
 }

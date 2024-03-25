@@ -2,8 +2,9 @@
 import React, { useState } from 'react';
 import { Transition } from '@headlessui/react';
 import Headroom from 'headroom.js';
-import { TvIcon } from '@heroicons/react/24/outline';
 import { Bars3BottomLeftIcon } from '@heroicons/react/24/outline';
+import ToggleTheme from '../theme/TaggleTheme';
+
 
 interface NavLink {
     title: string;
@@ -11,13 +12,14 @@ interface NavLink {
     href: string;
 }
 
-
 interface NavbarProps {
     links: NavLink[];
 }
 
 const Navbar: React.FC<NavbarProps> = ({ links }) => {
     const [isOpen, setIsOpen] = useState(false);
+    const [darkTheme, setDarkTheme] = useState(false);
+
 
     // Initialize headroom.js for navbar hiding on scroll
     React.useEffect(() => {
@@ -28,10 +30,11 @@ const Navbar: React.FC<NavbarProps> = ({ links }) => {
         }
     }, []);
 
+
     return (
-        <nav id="navbar" className="bg-primaryLight shadow-lg">
+        <nav id="navbar" className="shadow-lg bg-c-primary">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div className="flex items-center justify-between h-16">
+                <div className="flex  bg-c-primary items-center justify-between h-16">
                     <div className="flex items-center">
 
                         <div className="flex-shrink-0">
@@ -40,7 +43,7 @@ const Navbar: React.FC<NavbarProps> = ({ links }) => {
                         <div className="hidden md:block">
                             <div className="ml-10 flex items-baseline space-x-4">
                                 {links.map((link, index) => (
-                                    <a key={index} href={link.href} className="text-white hover:text-gray-200">
+                                    <a key={index} href={link.href} className="text-c-text hover:text-c-primary">
                                         {link.icon}
                                         <span className="ml-2">{link.title}</span>
                                     </a>
@@ -55,6 +58,9 @@ const Navbar: React.FC<NavbarProps> = ({ links }) => {
                         >
                             <Bars3BottomLeftIcon className="h-6 w-6" aria-hidden="true" />
                         </button>
+                    </div>
+                    <div className="flex items-center justify-center">
+                        <ToggleTheme></ToggleTheme>
                     </div>
                 </div>
             </div>
@@ -74,7 +80,7 @@ const Navbar: React.FC<NavbarProps> = ({ links }) => {
                             <a
                                 key={index}
                                 href={link.href}
-                                className="block px-3 py-2 rounded-md text-base font-medium text-white hover:text-gray-200"
+                                className={`block px-3 py-2 rounded-md text-base font-medium ${darkTheme ? 'text-gray-200 hover:text-gray-300' : 'text-white hover:text-gray-200'}`}
                             >
                                 {link.icon}
                                 <span className="ml-2">{link.title}</span>
