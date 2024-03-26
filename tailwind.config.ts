@@ -10,11 +10,13 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        "c-bg": 'var(--color-bg) ', // Background
+        "c-bg": 'var(--color-main) ', // Background
+        "c-primary": 'var(--color-primary)', //  Header/Footer (Primary)
+        "c-secondary": 'var(--color-secondary)', //  Header/Footer (Primary)
         "c-text": 'var(--color-text) ', // Text
-        "c-primary": 'var(--color-primary)', // Header/Footer (Primary)
         "c-button": 'var(--color-button) ', // Button
         "c-link": 'var(--color-link) ', // Link
+        "c-text-hover": "var(--color-text-hover)",
         "c-buttonBorder": 'var(--color-buttonBorder) ', // Button Border
         "c-inputBorder": 'var(--color-inputBorder) ', // Input Border
         "c-buttonHover": 'var(--color-buttonHover) ', // Button Hover
