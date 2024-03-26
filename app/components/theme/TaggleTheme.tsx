@@ -22,7 +22,7 @@ const ToggleTheme = () => {
         >
             <div className="relative w-10 h-6 bg-c-bg flex justify-center items-center border border-solid border-c-secondary rounded-full">
 
-                <div className={`absolute top-1 flex justify-center items-center left-1 w-4 h-4 rounded-full transition-transform duration-300 ${theme === 'dark' ? 'transform rotate-180 translate-x-full' : ''
+                <div className={`absolute flex justify-center items-center left-1 w-4 h-4 rounded-full transition-transform duration-300 ${theme === 'dark' ? 'transform rotate-180 translate-x-full' : ''
                     }`}>
                     {theme === 'dark' ?
                         <FaMoon
