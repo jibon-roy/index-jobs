@@ -110,6 +110,6 @@ html {
     transition: width 0.03s ease, right 0.03s ease;
 }
 
-.text-c-text:hover::after {
-    width: 100%;
+.menu-text:hover::after {
+    width: 150%;
 }
