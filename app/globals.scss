@@ -11,7 +11,7 @@
         /* Header/Footer (Primary) */
         --color-primary: rgb(245, 247, 250);
         /* Color secondery */
-        --color-secondary: rgb(34, 171, 89);
+        --color-secondary: #22ab59;
         // Text color
         --color-text: rgb(51, 51, 51);
         --color-text-hover: rgb(110, 110, 110);
@@ -40,11 +40,11 @@
     @media (prefers-color-scheme:dark) {
         :root {
             /* Background */
-            --color-main: rgb(88, 88, 88);
+            --color-main: rgb(44, 45, 56);
             /* Text */
             --color-text: rgb(238, 238, 238);
             /* Header/Footer (Primary) */
-            --color-primary: rgb(255, 87, 34);
+            --color-primary: rgb(34, 35, 46);
             /* Button */
             --color-button: rgb(76, 175, 80);
             /* Link */
@@ -68,11 +68,11 @@
 
     :root[data-theme="dark"] {
         /* Background */
-        --color-main: rgb(88, 88, 88);
+        --color-main: rgb(44, 45, 56);
         /* Text */
         --color-text: rgb(238, 238, 238);
         /* Header/Footer (Primary) */
-        --color-primary: rgb(255, 87, 34);
+        --color-primary: rgb(34, 35, 46);
         /* Button */
         --color-button: rgb(76, 175, 80);
         /* Link */
