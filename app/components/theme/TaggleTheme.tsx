@@ -14,7 +14,7 @@ const ToggleTheme = () => {
     };
 
     if (!mounted) return null;
-
+    // Fixed mounted problem
     return (
         <button
             className="bg-transparent p-2 rounded-full text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-gray-100 focus:outline-none"

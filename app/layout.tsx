@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.scss";
 import { ThemeProvider } from "./providers/theme/ThemeProvider";
+import StyledJsxRegistry from "@/lib/registry";
 
 
 
@@ -21,7 +22,9 @@ export default function RootLayout({ children }: {
     <html lang="en" className="text-sm" suppressHydrationWarning={true} >
       <body suppressHydrationWarning={true} className={inter.className}>
         <ThemeProvider >
-          {children}
+          <StyledJsxRegistry>
+            {children}
+          </StyledJsxRegistry>
         </ThemeProvider>
       </body>
     </html>
